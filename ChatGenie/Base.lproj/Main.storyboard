@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="ChatGenie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💡ChatGenie" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="hh3-cB-b1g">
+                                <rect key="frame" x="48" y="418" width="318" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="N35-tz-s1M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
+                                <color key="textColor" name="Brand Green"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ts3-JZ-nQv">
+                                <rect key="frame" x="0.0" y="801" width="414" height="61"/>
+                                <color key="backgroundColor" name="Brand Green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="0Bs-Eu-koU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MzK-oM-hUd" kind="show" id="ble-X8-Nx0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irf-dV-oZL">
+                                <rect key="frame" x="0.0" y="745" width="414" height="48"/>
+                                <color key="backgroundColor" name="Brand Light Green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="IGP-33-1Eh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" name="Brand Green"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Yk8-bG-FJV" kind="show" id="BdI-Pg-fO7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ts3-JZ-nQv" firstAttribute="top" secondItem="irf-dV-oZL" secondAttribute="bottom" constant="8" id="0b8-xU-6VL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="irf-dV-oZL" secondAttribute="trailing" id="611-V2-ARw"/>
+                            <constraint firstItem="ts3-JZ-nQv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Jxt-WD-NhI"/>
+                            <constraint firstItem="ts3-JZ-nQv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mug-L3-UWI"/>
+                            <constraint firstItem="hh3-cB-b1g" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pb2-6C-fOy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ts3-JZ-nQv" secondAttribute="trailing" id="QVZ-fQ-tu6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hh3-cB-b1g" secondAttribute="trailing" id="TI3-WB-rp7"/>
+                            <constraint firstItem="hh3-cB-b1g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bXk-sb-4IE"/>
+                            <constraint firstItem="hh3-cB-b1g" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cMs-oU-5jj"/>
+                            <constraint firstItem="irf-dV-oZL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lR6-QP-4Je"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="hh3-cB-b1g" id="DOV-Cd-XVN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56" y="203"/>
+        </scene>
+        <!--Log In View Controller-->
+        <scene sceneID="25t-Kd-gdU">
+            <objects>
+                <viewController id="MzK-oM-hUd" customClass="LogInViewController" customModule="ChatGenie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="esj-91-92B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="F3v-Ek-kez" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="48" y="48" width="318" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7tG-5m-CUx"/>
+                                </constraints>
+                                <color key="textColor" name="Brand Green"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelActiveTextColor">
+                                        <color key="value" name="Brand Green"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" name="Brand Green"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0Fj-tK-1k0" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="48" y="146" width="318" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fdr-yR-HCs"/>
+                                </constraints>
+                                <color key="textColor" name="Brand Green"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelActiveTextColor">
+                                        <color key="value" name="Brand Green"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" name="Brand Green"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3T-bm-bSW">
+                                <rect key="frame" x="60" y="244" width="294" height="50"/>
+                                <color key="backgroundColor" name="Brand Green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KbG-rI-Nhi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0vy-85-Na5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0vy-85-Na5" firstAttribute="trailing" secondItem="0Fj-tK-1k0" secondAttribute="trailing" constant="48" id="4Gw-aE-78k"/>
+                            <constraint firstItem="F3v-Ek-kez" firstAttribute="leading" secondItem="0vy-85-Na5" secondAttribute="leading" constant="48" id="I6i-Z5-i65"/>
+                            <constraint firstItem="F3v-Ek-kez" firstAttribute="top" secondItem="0vy-85-Na5" secondAttribute="top" constant="48" id="Law-Ei-dhq"/>
+                            <constraint firstItem="Y3T-bm-bSW" firstAttribute="top" secondItem="0Fj-tK-1k0" secondAttribute="bottom" constant="48" id="PRY-Q6-sSW"/>
+                            <constraint firstItem="0vy-85-Na5" firstAttribute="trailing" secondItem="Y3T-bm-bSW" secondAttribute="trailing" constant="60" id="PvW-ZU-Y70"/>
+                            <constraint firstItem="0Fj-tK-1k0" firstAttribute="top" secondItem="F3v-Ek-kez" secondAttribute="bottom" constant="48" id="YMZ-q9-pZA"/>
+                            <constraint firstItem="Y3T-bm-bSW" firstAttribute="leading" secondItem="0vy-85-Na5" secondAttribute="leading" constant="60" id="qsh-en-YJa"/>
+                            <constraint firstItem="0Fj-tK-1k0" firstAttribute="leading" secondItem="0vy-85-Na5" secondAttribute="leading" constant="48" id="qsl-bP-Dd7"/>
+                            <constraint firstItem="0vy-85-Na5" firstAttribute="trailing" secondItem="F3v-Ek-kez" secondAttribute="trailing" constant="48" id="xHb-aL-QaV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6fx-cI-w35"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R4L-0z-czC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1115" y="659"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ABn-Xa-3MB">
+            <objects>
+                <viewController id="fDc-ZE-szU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ma7-D0-jQw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ulw-wx-NeB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbf-92-geZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2240" y="203"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="cTm-y1-MwQ">
+            <objects>
+                <viewController id="Yk8-bG-FJV" customClass="RegisterViewController" customModule="ChatGenie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yrw-7V-g6j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KEd-vw-YVn" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="48" y="50" width="318" height="39.5"/>
+                                <color key="textColor" name="Brand Green"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelYPadding">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" name="Brand Green"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelActiveTextColor">
+                                        <color key="value" name="Brand Green"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fUb-nu-JAM" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="48" y="137.5" width="318" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3BX-AB-Wwb"/>
+                                </constraints>
+                                <color key="textColor" name="Brand Green"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelActiveTextColor">
+                                        <color key="value" name="Brand Green"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" name="Brand Green"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYp-da-h0N">
+                                <rect key="frame" x="60" y="235.5" width="294" height="50"/>
+                                <color key="backgroundColor" name="Brand Green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="061-bL-p9C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WHh-Dr-un0"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KEd-vw-YVn" firstAttribute="leading" secondItem="WHh-Dr-un0" secondAttribute="leading" constant="48" id="3qO-45-I4n"/>
+                            <constraint firstItem="KYp-da-h0N" firstAttribute="top" secondItem="fUb-nu-JAM" secondAttribute="bottom" constant="48" id="Prb-49-FNi"/>
+                            <constraint firstItem="WHh-Dr-un0" firstAttribute="trailing" secondItem="KEd-vw-YVn" secondAttribute="trailing" constant="48" id="TLE-59-AIg"/>
+                            <constraint firstItem="KYp-da-h0N" firstAttribute="leading" secondItem="WHh-Dr-un0" secondAttribute="leading" constant="60" id="VOp-7A-eIw"/>
+                            <constraint firstItem="fUb-nu-JAM" firstAttribute="leading" secondItem="WHh-Dr-un0" secondAttribute="leading" constant="48" id="XA5-gP-TCb"/>
+                            <constraint firstItem="KEd-vw-YVn" firstAttribute="top" secondItem="WHh-Dr-un0" secondAttribute="top" constant="50" id="hAT-0N-FoC"/>
+                            <constraint firstItem="fUb-nu-JAM" firstAttribute="top" secondItem="KEd-vw-YVn" secondAttribute="bottom" constant="48" id="iqi-Wh-WaX"/>
+                            <constraint firstItem="WHh-Dr-un0" firstAttribute="trailing" secondItem="fUb-nu-JAM" secondAttribute="trailing" constant="48" id="jzw-KO-TJO"/>
+                            <constraint firstItem="WHh-Dr-un0" firstAttribute="trailing" secondItem="KYp-da-h0N" secondAttribute="trailing" constant="60" id="l3n-5U-aJU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jiS-yO-rwc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ni-Gs-YoO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1114" y="-315"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Brand Green">
+            <color red="0.57999998331069946" green="0.70599997043609619" blue="0.62400001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Brand Light Green">
+            <color red="0.9570000171661377" green="0.98799997568130493" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "jvfloatlabeledtextfield",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jverdi/JVFloatLabeledTextField",
+      "state" : {
+        "revision" : "69c0e80a2d0b9dac52ec37a164c9c5fe0e901038",
+        "version" : "1.2.5"
+      }
+    }
+  ],
+  "version" : 2
+}

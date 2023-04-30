@@ -1,0 +1,2 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ACFloatingTextfield_Swift.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CLTypingLabel.framework
