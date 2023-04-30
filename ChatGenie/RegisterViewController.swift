@@ -8,11 +8,13 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
-
+    @IBOutlet weak var registerButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        registerButton.layer.cornerRadius = registerButton.frame.size.height / 2.1
     }
     
 

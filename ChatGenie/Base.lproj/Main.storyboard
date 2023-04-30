@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WYf-AC-3S4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -39,7 +39,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="MzK-oM-hUd" kind="show" id="ble-X8-Nx0"/>
+                                    <segue destination="MzK-oM-hUd" kind="show" id="Grb-XU-bIC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irf-dV-oZL">
@@ -73,24 +73,25 @@
                             <constraint firstItem="irf-dV-oZL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lR6-QP-4Je"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="CJv-YH-iV0"/>
                     <connections>
                         <outlet property="titleLabel" destination="hh3-cB-b1g" id="DOV-Cd-XVN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="56" y="203"/>
+            <point key="canvasLocation" x="1875.3623188405797" y="202.90178571428569"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="25t-Kd-gdU">
             <objects>
                 <viewController id="MzK-oM-hUd" customClass="LogInViewController" customModule="ChatGenie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="esj-91-92B">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="F3v-Ek-kez" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="48" y="48" width="318" height="50"/>
+                                <rect key="frame" x="48" y="140" width="318" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7tG-5m-CUx"/>
                                 </constraints>
@@ -107,13 +108,13 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0Fj-tK-1k0" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="48" y="146" width="318" height="50"/>
+                                <rect key="frame" x="48" y="238" width="318" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fdr-yR-HCs"/>
                                 </constraints>
                                 <color key="textColor" name="Brand Green"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelActiveTextColor">
                                         <color key="value" name="Brand Green"/>
@@ -124,7 +125,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3T-bm-bSW">
-                                <rect key="frame" x="60" y="244" width="294" height="50"/>
+                                <rect key="frame" x="60" y="336" width="294" height="50"/>
                                 <color key="backgroundColor" name="Brand Green"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="KbG-rI-Nhi"/>
@@ -151,10 +152,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6fx-cI-w35"/>
+                    <connections>
+                        <outlet property="logInButton" destination="Y3T-bm-bSW" id="cII-a7-pJe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R4L-0z-czC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1115" y="659"/>
+            <point key="canvasLocation" x="2931.8840579710145" y="632.8125"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ABn-Xa-3MB">
@@ -169,18 +173,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbf-92-geZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2240" y="203"/>
+            <point key="canvasLocation" x="3965.217391304348" y="202.90178571428569"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="cTm-y1-MwQ">
             <objects>
                 <viewController id="Yk8-bG-FJV" customClass="RegisterViewController" customModule="ChatGenie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yrw-7V-g6j">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KEd-vw-YVn" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="48" y="50" width="318" height="39.5"/>
+                                <rect key="frame" x="48" y="142" width="318" height="39.5"/>
                                 <color key="textColor" name="Brand Green"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
@@ -197,13 +201,13 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fUb-nu-JAM" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="48" y="137.5" width="318" height="50"/>
+                                <rect key="frame" x="48" y="229.5" width="318" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3BX-AB-Wwb"/>
                                 </constraints>
                                 <color key="textColor" name="Brand Green"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelActiveTextColor">
                                         <color key="value" name="Brand Green"/>
@@ -214,7 +218,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYp-da-h0N">
-                                <rect key="frame" x="60" y="235.5" width="294" height="50"/>
+                                <rect key="frame" x="60" y="327.5" width="294" height="50"/>
                                 <color key="backgroundColor" name="Brand Green"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="061-bL-p9C"/>
@@ -241,10 +245,33 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jiS-yO-rwc"/>
+                    <connections>
+                        <outlet property="registerButton" destination="KYp-da-h0N" id="mv5-Md-P4t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ni-Gs-YoO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114" y="-315"/>
+            <point key="canvasLocation" x="2933.3333333333335" y="-315.40178571428572"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Dmk-9b-R1n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WYf-AC-3S4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="aOF-FU-yCT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qn6-7i-fqC">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="Brand Green"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DdQ-QO-UT5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U1w-Fh-Aim" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965.21739130434787" y="202.90178571428569"/>
         </scene>
     </scenes>
     <resources>
