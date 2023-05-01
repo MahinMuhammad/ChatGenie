@@ -13,7 +13,11 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
-//        title = Auth.auth().currentUser
+        
+        if let titleColor = UIColor(named: K.BrandColor.BrandGreen){
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:titleColor]
+        }
+        title = Auth.auth().currentUser?.email
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {

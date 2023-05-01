@@ -251,7 +251,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KEd-vw-YVn" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="48" y="142" width="318" height="39.5"/>
+                                <rect key="frame" x="48" y="140" width="318" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zA9-Tf-4s2"/>
+                                </constraints>
                                 <color key="textColor" name="Brand Green"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
@@ -268,7 +271,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fUb-nu-JAM" customClass="JVFloatLabeledTextField">
-                                <rect key="frame" x="48" y="229.5" width="318" height="50"/>
+                                <rect key="frame" x="48" y="238" width="318" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3BX-AB-Wwb"/>
                                 </constraints>
@@ -285,7 +288,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYp-da-h0N">
-                                <rect key="frame" x="60" y="327.5" width="294" height="50"/>
+                                <rect key="frame" x="60" y="336" width="294" height="50"/>
                                 <color key="backgroundColor" name="Brand Green"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="061-bL-p9C"/>
@@ -308,7 +311,7 @@
                             <constraint firstItem="WHh-Dr-un0" firstAttribute="trailing" secondItem="KEd-vw-YVn" secondAttribute="trailing" constant="48" id="TLE-59-AIg"/>
                             <constraint firstItem="KYp-da-h0N" firstAttribute="leading" secondItem="WHh-Dr-un0" secondAttribute="leading" constant="60" id="VOp-7A-eIw"/>
                             <constraint firstItem="fUb-nu-JAM" firstAttribute="leading" secondItem="WHh-Dr-un0" secondAttribute="leading" constant="48" id="XA5-gP-TCb"/>
-                            <constraint firstItem="KEd-vw-YVn" firstAttribute="top" secondItem="WHh-Dr-un0" secondAttribute="top" constant="50" id="hAT-0N-FoC"/>
+                            <constraint firstItem="KEd-vw-YVn" firstAttribute="top" secondItem="WHh-Dr-un0" secondAttribute="top" constant="48" id="hAT-0N-FoC"/>
                             <constraint firstItem="fUb-nu-JAM" firstAttribute="top" secondItem="KEd-vw-YVn" secondAttribute="bottom" constant="48" id="iqi-Wh-WaX"/>
                             <constraint firstItem="WHh-Dr-un0" firstAttribute="trailing" secondItem="fUb-nu-JAM" secondAttribute="trailing" constant="48" id="jzw-KO-TJO"/>
                             <constraint firstItem="WHh-Dr-un0" firstAttribute="trailing" secondItem="KYp-da-h0N" secondAttribute="trailing" constant="60" id="l3n-5U-aJU"/>
@@ -362,7 +365,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="FKQ-EC-1ST"/>
+        <segue reference="jvR-ZM-RSB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
