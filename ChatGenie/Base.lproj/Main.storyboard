@@ -135,6 +135,9 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="logInPressed:" destination="MzK-oM-hUd" eventType="touchUpInside" id="1AT-LH-Xnt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0vy-85-Na5"/>
@@ -153,7 +156,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="6fx-cI-w35"/>
                     <connections>
+                        <outlet property="emailField" destination="F3v-Ek-kez" id="v72-gR-RV8"/>
                         <outlet property="logInButton" destination="Y3T-bm-bSW" id="cII-a7-pJe"/>
+                        <outlet property="passwordField" destination="0Fj-tK-1k0" id="37i-rB-De3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R4L-0z-czC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -228,6 +233,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerPressed:" destination="Yk8-bG-FJV" eventType="touchUpInside" id="MHv-n4-kPg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WHh-Dr-un0"/>
@@ -246,6 +254,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="jiS-yO-rwc"/>
                     <connections>
+                        <outlet property="emailField" destination="KEd-vw-YVn" id="3Hi-4g-D63"/>
+                        <outlet property="passwordField" destination="fUb-nu-JAM" id="CGc-fl-E4J"/>
                         <outlet property="registerButton" destination="KYp-da-h0N" id="mv5-Md-P4t"/>
                     </connections>
                 </viewController>
@@ -274,6 +284,20 @@
             <point key="canvasLocation" x="965.21739130434787" y="202.90178571428569"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="0Fj-tK-1k0">
+            <size key="intrinsicContentSize" width="132" height="38"/>
+        </designable>
+        <designable name="F3v-Ek-kez">
+            <size key="intrinsicContentSize" width="86.5" height="39.5"/>
+        </designable>
+        <designable name="KEd-vw-YVn">
+            <size key="intrinsicContentSize" width="86.5" height="39.5"/>
+        </designable>
+        <designable name="fUb-nu-JAM">
+            <size key="intrinsicContentSize" width="132" height="38"/>
+        </designable>
+    </designables>
     <resources>
         <namedColor name="Brand Green">
             <color red="0.57999998331069946" green="0.70599997043609619" blue="0.62400001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

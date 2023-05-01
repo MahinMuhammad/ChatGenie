@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import JVFloatLabeledTextField
+import FirebaseAuth
 
 class LogInViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet weak var emailField: JVFloatLabeledTextField!
+    @IBOutlet weak var passwordField: JVFloatLabeledTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +21,9 @@ class LogInViewController: UIViewController {
         logInButton.layer.cornerRadius = logInButton.frame.size.height / 2.1
     }
     
-
+    @IBAction func logInPressed(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 

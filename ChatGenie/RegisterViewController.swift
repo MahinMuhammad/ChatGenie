@@ -7,8 +7,13 @@
 
 import UIKit
 
+import FirebaseAuth
+import JVFloatLabeledTextField
+
 class RegisterViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var emailField: JVFloatLabeledTextField!
+    @IBOutlet weak var passwordField: JVFloatLabeledTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +22,10 @@ class RegisterViewController: UIViewController {
         registerButton.layer.cornerRadius = registerButton.frame.size.height / 2.1
     }
     
-
+    @IBAction func registerPressed(_ sender: UIButton) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
