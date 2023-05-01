@@ -21,6 +21,9 @@
 		00C2ACE929FF9C370011DD89 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2ACE829FF9C370011DD89 /* K.swift */; };
 		00C2ACED29FFB9650011DD89 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00C2ACEC29FFB9650011DD89 /* GoogleService-Info.plist */; };
 		00C2ACF129FFDECD0011DD89 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2ACF029FFDECD0011DD89 /* ChatViewController.swift */; };
+		00D2E7BF29FFFAD7006A1C2A /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 00D2E7BE29FFFAD7006A1C2A /* IQKeyboardManagerSwift */; };
+		00D2E7C229FFFCE5006A1C2A /* CustomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D2E7C029FFFCE5006A1C2A /* CustomMessageCell.swift */; };
+		00D2E7C329FFFCE5006A1C2A /* CustomMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00D2E7C129FFFCE5006A1C2A /* CustomMessageCell.xib */; };
 		0B1CF994C9935FF08B996061 /* Pods_ChatGenie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED228BF3B34C7B7DED0B9724 /* Pods_ChatGenie.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +41,8 @@
 		00C2ACE829FF9C370011DD89 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		00C2ACEC29FFB9650011DD89 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00C2ACF029FFDECD0011DD89 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		00D2E7C029FFFCE5006A1C2A /* CustomMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageCell.swift; sourceTree = "<group>"; };
+		00D2E7C129FFFCE5006A1C2A /* CustomMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMessageCell.xib; sourceTree = "<group>"; };
 		8BFD168F2ABCD2A70C8049EC /* Pods-ChatGenie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatGenie.release.xcconfig"; path = "Target Support Files/Pods-ChatGenie/Pods-ChatGenie.release.xcconfig"; sourceTree = "<group>"; };
 		EBE8171CC7047677E2AD76A9 /* Pods-ChatGenie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatGenie.debug.xcconfig"; path = "Target Support Files/Pods-ChatGenie/Pods-ChatGenie.debug.xcconfig"; sourceTree = "<group>"; };
 		ED228BF3B34C7B7DED0B9724 /* Pods_ChatGenie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatGenie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00D2E7BF29FFFAD7006A1C2A /* IQKeyboardManagerSwift in Frameworks */,
 				0B1CF994C9935FF08B996061 /* Pods_ChatGenie.framework in Frameworks */,
 				00C2ACE729FF973F0011DD89 /* FirebaseFirestore in Frameworks */,
 				00C2ACE529FF973F0011DD89 /* FirebaseAuth in Frameworks */,
@@ -107,6 +113,8 @@
 			children = (
 				00C2ACCB29FEBA5A0011DD89 /* Main.storyboard */,
 				00C2ACD029FEBA5C0011DD89 /* LaunchScreen.storyboard */,
+				00D2E7C029FFFCE5006A1C2A /* CustomMessageCell.swift */,
+				00D2E7C129FFFCE5006A1C2A /* CustomMessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,6 +157,7 @@
 				00C2ACDA29FED3770011DD89 /* JVFloatLabeledTextField */,
 				00C2ACE429FF973F0011DD89 /* FirebaseAuth */,
 				00C2ACE629FF973F0011DD89 /* FirebaseFirestore */,
+				00D2E7BE29FFFAD7006A1C2A /* IQKeyboardManagerSwift */,
 			);
 			productName = ChatGenie;
 			productReference = 00C2ACC229FEBA5A0011DD89 /* ChatGenie.app */;
@@ -181,6 +190,7 @@
 			packageReferences = (
 				00C2ACD929FED3770011DD89 /* XCRemoteSwiftPackageReference "JVFloatLabeledTextField" */,
 				00C2ACE329FF973F0011DD89 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				00D2E7BD29FFFAD7006A1C2A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 00C2ACC329FEBA5A0011DD89 /* Products */;
 			projectDirPath = "";
@@ -199,6 +209,7 @@
 				00C2ACD229FEBA5C0011DD89 /* LaunchScreen.storyboard in Resources */,
 				00C2ACED29FFB9650011DD89 /* GoogleService-Info.plist in Resources */,
 				00C2ACCF29FEBA5C0011DD89 /* Assets.xcassets in Resources */,
+				00D2E7C329FFFCE5006A1C2A /* CustomMessageCell.xib in Resources */,
 				00C2ACCD29FEBA5A0011DD89 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +248,7 @@
 			files = (
 				00C2ACCA29FEBA5A0011DD89 /* WelcomeViewController.swift in Sources */,
 				00C2ACC629FEBA5A0011DD89 /* AppDelegate.swift in Sources */,
+				00D2E7C229FFFCE5006A1C2A /* CustomMessageCell.swift in Sources */,
 				00C2ACC829FEBA5A0011DD89 /* SceneDelegate.swift in Sources */,
 				00C2ACF129FFDECD0011DD89 /* ChatViewController.swift in Sources */,
 				00C2ACE929FF9C370011DD89 /* K.swift in Sources */,
@@ -481,6 +493,14 @@
 				minimumVersion = 10.9.0;
 			};
 		};
+		00D2E7BD29FFFAD7006A1C2A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -498,6 +518,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 00C2ACE329FF973F0011DD89 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		00D2E7BE29FFFAD7006A1C2A /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00D2E7BD29FFFAD7006A1C2A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
