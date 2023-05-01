@@ -25,4 +25,9 @@ struct K{
         static let BrandLightGolden = "Brand Light Golden"
         static let BrandLightGreen = "Brand Light Green"
     }
+    
+    struct MessageCell{
+        static let cellIdentifier = "ReusableCell"
+        static let cellNibName = "CustomMessageCell"
+    }
 }

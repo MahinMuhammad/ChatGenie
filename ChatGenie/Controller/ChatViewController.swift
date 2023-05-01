@@ -9,7 +9,14 @@ import UIKit
 import FirebaseAuth
 
 class ChatViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var messageTextField: UITextField!
+    
+    let messages:[Message] = [
+        Message(body: "Hi this a demo bot message", userEmail: Auth.auth().currentUser?.email ?? "a@b.com", senderUserOrBot: K.MessageSender.bot),
+        Message(body: "Hi this a user", userEmail: Auth.auth().currentUser?.email ?? "a@b.com", senderUserOrBot: K.MessageSender.user)
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
@@ -18,6 +25,9 @@ class ChatViewController: UIViewController {
             navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:titleColor]
         }
         title = Auth.auth().currentUser?.email
+        
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: K.MessageCell.cellNibName, bundle: nil), forCellReuseIdentifier: K.MessageCell.cellIdentifier)
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
@@ -29,14 +39,40 @@ class ChatViewController: UIViewController {
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func sendPressed(_ sender: UIButton) {
+        if let messageBody = messageTextField.text{
+            print(messageBody)
+        }
+        messageTextField.text = ""
     }
-    */
+}
 
+//MARK: - UITableViewDataSource
+
+extension ChatViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let message = messages[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.MessageCell.cellIdentifier, for: indexPath) as! CustomMessageCell
+        
+        cell.messageBody.text = message.body
+        
+        if message.senderUserOrBot == K.MessageSender.user{
+            cell.botBadge.isHidden = true
+            cell.userBadge.isHidden = false
+            cell.messageBox.backgroundColor = UIColor(named: K.BrandColor.BrandLightGreen)
+            cell.messageBody.textColor = UIColor(named: K.BrandColor.BrandGreen)
+        }else{
+            cell.botBadge.isHidden = false
+            cell.userBadge.isHidden = true
+            cell.messageBox.backgroundColor = UIColor(named: K.BrandColor.BrandGrey)
+            cell.messageBody.textColor = UIColor(named: K.BrandColor.BrandGreen)
+        }
+        
+        return cell
+    }
 }

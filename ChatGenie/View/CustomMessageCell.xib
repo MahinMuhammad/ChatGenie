@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="CustomMessageCell" customModule="ChatGenie" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="70" id="KGk-i7-Jjw" customClass="CustomMessageCell" customModule="ChatGenie" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="329" height="70"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -32,7 +32,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="Brand Golden"/>
+                                <color key="backgroundColor" name="Brand Light Golden"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="JaX-Vw-gKX"/>
                                     <constraint firstAttribute="width" constant="40" id="dU1-QY-NWd"/>
@@ -41,15 +41,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qB-Ur-irg">
                                 <rect key="frame" x="48" y="0.0" width="213" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpI-fc-fEX">
-                                        <rect key="frame" x="85" y="15" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpI-fc-fEX">
+                                        <rect key="frame" x="10" y="10" width="193" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="Brand Green"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="Brand Green"/>
+                                <color key="backgroundColor" name="Brand Light Green"/>
+                                <constraints>
+                                    <constraint firstItem="tpI-fc-fEX" firstAttribute="top" secondItem="9qB-Ur-irg" secondAttribute="top" constant="10" id="0Ut-np-EiU"/>
+                                    <constraint firstItem="tpI-fc-fEX" firstAttribute="leading" secondItem="9qB-Ur-irg" secondAttribute="leading" constant="10" id="DmP-RK-oFp"/>
+                                    <constraint firstAttribute="bottom" secondItem="tpI-fc-fEX" secondAttribute="bottom" constant="10" id="FKG-Zv-ChM"/>
+                                    <constraint firstAttribute="trailing" secondItem="tpI-fc-fEX" secondAttribute="trailing" constant="10" id="IPt-Rp-B9P"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mkg-8E-T1j">
                                 <rect key="frame" x="269" y="0.0" width="40" height="40"/>
@@ -62,7 +67,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="Brand Light Golden"/>
+                                <color key="backgroundColor" name="Brand Golden"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="dOZ-6A-srR"/>
                                     <constraint firstAttribute="width" constant="40" id="fmT-kU-dGZ"/>
@@ -81,6 +86,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="botBadge" destination="5KK-wE-Y05" id="Hnd-jV-eYX"/>
+                <outlet property="messageBody" destination="tpI-fc-fEX" id="eXY-rJ-Hcd"/>
                 <outlet property="messageBox" destination="9qB-Ur-irg" id="3Vj-S9-q3d"/>
                 <outlet property="userBadge" destination="Mkg-8E-T1j" id="0b1-hG-til"/>
             </connections>
@@ -96,6 +102,9 @@
         </namedColor>
         <namedColor name="Brand Light Golden">
             <color red="1" green="0.91764705882352937" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Brand Light Green">
+            <color red="0.9570000171661377" green="0.98799997568130493" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

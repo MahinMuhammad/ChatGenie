@@ -10,6 +10,7 @@ import UIKit
 class CustomMessageCell: UITableViewCell {
     @IBOutlet weak var messageBox: UIView!
     @IBOutlet weak var userBadge: UIView!
+    @IBOutlet weak var messageBody: UILabel!
     @IBOutlet weak var botBadge: UIView!
     
     override func awakeFromNib() {
