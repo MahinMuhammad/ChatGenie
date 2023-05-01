@@ -1,17 +1,16 @@
 //
-//  RegisterViewController.swift
+//  LogInViewController.swift
 //  ChatGenie
 //
 //  Created by Md. Mahinur Rahman on 5/1/23.
 //
 
 import UIKit
-
-import FirebaseAuth
 import JVFloatLabeledTextField
+import FirebaseAuth
 
-class RegisterViewController: UIViewController {
-    @IBOutlet weak var registerButton: UIButton!
+class LogInViewController: UIViewController {
+    @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var emailField: JVFloatLabeledTextField!
     @IBOutlet weak var passwordField: JVFloatLabeledTextField!
     
@@ -19,20 +18,17 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        registerButton.layer.cornerRadius = registerButton.frame.size.height / 2.1
+        logInButton.layer.cornerRadius = logInButton.frame.size.height / 2.1
     }
     
-    @IBAction func registerPressed(_ sender: UIButton) {
-        let email = emailField.text
-        let password = passwordField.text
-        
-        if let safeEmail = email, let safePassword = password{
-            Auth.auth().createUser(withEmail: safeEmail, password: safePassword){ authResult, error in
+    @IBAction func logInPressed(_ sender: UIButton) {
+        if let email = emailField.text, let password = passwordField.text{
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let e = error{
-                    print("Found error while registering user! \(e)")
+                    print("LogIn failed with error: \(e)")
                 }else{
-                    print("User registration successfull!")
-                    self.performSegue(withIdentifier: K.Segues.registerSegue, sender: self)
+                    print("LogIn Successful")
+                    self.performSegue(withIdentifier: K.Segues.loginSegue, sender: self)
                 }
             }
         }

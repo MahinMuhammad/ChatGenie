@@ -1,27 +1,28 @@
 //
-//  LogInViewController.swift
+//  ChatViewController.swift
 //  ChatGenie
 //
 //  Created by Md. Mahinur Rahman on 5/1/23.
 //
 
 import UIKit
-import JVFloatLabeledTextField
 import FirebaseAuth
 
-class LogInViewController: UIViewController {
-    @IBOutlet weak var logInButton: UIButton!
-    @IBOutlet weak var emailField: JVFloatLabeledTextField!
-    @IBOutlet weak var passwordField: JVFloatLabeledTextField!
-    
+class ChatViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        logInButton.layer.cornerRadius = logInButton.frame.size.height / 2.1
+        navigationItem.hidesBackButton = true
+//        title = Auth.auth().currentUser
     }
     
-    @IBAction func logInPressed(_ sender: UIButton) {
+    @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
+        do {
+          try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+        } catch let signOutError as NSError {
+          print("Error signing out: %@", signOutError)
+        }
     }
     
     /*

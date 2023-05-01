@@ -90,14 +90,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="F3v-Ek-kez" customClass="JVFloatLabeledTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a@b.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="F3v-Ek-kez" customClass="JVFloatLabeledTextField">
                                 <rect key="frame" x="48" y="140" width="318" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7tG-5m-CUx"/>
                                 </constraints>
                                 <color key="textColor" name="Brand Green"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelActiveTextColor">
                                         <color key="value" name="Brand Green"/>
@@ -107,7 +107,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0Fj-tK-1k0" customClass="JVFloatLabeledTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0Fj-tK-1k0" customClass="JVFloatLabeledTextField">
                                 <rect key="frame" x="48" y="238" width="318" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fdr-yR-HCs"/>
@@ -166,17 +166,24 @@
             </objects>
             <point key="canvasLocation" x="2931.8840579710145" y="632.8125"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="ABn-Xa-3MB">
             <objects>
-                <viewController id="fDc-ZE-szU" sceneMemberID="viewController">
+                <viewController id="fDc-ZE-szU" customClass="ChatViewController" customModule="ChatGenie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ma7-D0-jQw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="ulw-wx-NeB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="PYM-sF-vya"/>
+                    <navigationItem key="navigationItem" title="Title" id="PWr-tF-CL9">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="HbD-JC-ThT">
+                            <color key="tintColor" name="Brand Green"/>
+                            <connections>
+                                <action selector="logOutPressed:" destination="fDc-ZE-szU" id="R3J-w8-TSR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbf-92-geZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -194,7 +201,7 @@
                                 <rect key="frame" x="48" y="142" width="318" height="39.5"/>
                                 <color key="textColor" name="Brand Green"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelYPadding">
                                         <real key="value" value="0.0"/>
@@ -214,7 +221,7 @@
                                 </constraints>
                                 <color key="textColor" name="Brand Green"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="one-time-code"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelActiveTextColor">
                                         <color key="value" name="Brand Green"/>
@@ -292,7 +299,7 @@
             <size key="intrinsicContentSize" width="132" height="38"/>
         </designable>
         <designable name="F3v-Ek-kez">
-            <size key="intrinsicContentSize" width="86.5" height="39.5"/>
+            <size key="intrinsicContentSize" width="129" height="39.5"/>
         </designable>
         <designable name="KEd-vw-YVn">
             <size key="intrinsicContentSize" width="86.5" height="39.5"/>
