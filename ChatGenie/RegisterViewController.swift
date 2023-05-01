@@ -23,7 +23,19 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerPressed(_ sender: UIButton) {
+        let email = emailField.text
+        let password = passwordField.text
         
+        if let safeEmail = email, let safePassword = password{
+            Auth.auth().createUser(withEmail: safeEmail, password: safePassword){ authResult, error in
+                if let e = error{
+                    print("Found error while registering user! \(e)")
+                }else{
+                    print("User registration successfull!")
+                    self.performSegue(withIdentifier: K.Segues.registerSegue, sender: self)
+                }
+            }
+        }
     }
     
     /*

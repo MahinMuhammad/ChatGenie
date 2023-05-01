@@ -18,6 +18,7 @@
 		00C2ACDF29FEEA8F0011DD89 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2ACDE29FEEA8F0011DD89 /* LogInViewController.swift */; };
 		00C2ACE529FF973F0011DD89 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 00C2ACE429FF973F0011DD89 /* FirebaseAuth */; };
 		00C2ACE729FF973F0011DD89 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 00C2ACE629FF973F0011DD89 /* FirebaseFirestore */; };
+		00C2ACE929FF9C370011DD89 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2ACE829FF9C370011DD89 /* K.swift */; };
 		0B1CF994C9935FF08B996061 /* Pods_ChatGenie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED228BF3B34C7B7DED0B9724 /* Pods_ChatGenie.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		00C2ACD329FEBA5C0011DD89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00C2ACDC29FEEA5F0011DD89 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		00C2ACDE29FEEA8F0011DD89 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		00C2ACE829FF9C370011DD89 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		8BFD168F2ABCD2A70C8049EC /* Pods-ChatGenie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatGenie.release.xcconfig"; path = "Target Support Files/Pods-ChatGenie/Pods-ChatGenie.release.xcconfig"; sourceTree = "<group>"; };
 		EBE8171CC7047677E2AD76A9 /* Pods-ChatGenie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatGenie.debug.xcconfig"; path = "Target Support Files/Pods-ChatGenie/Pods-ChatGenie.debug.xcconfig"; sourceTree = "<group>"; };
 		ED228BF3B34C7B7DED0B9724 /* Pods_ChatGenie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatGenie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,7 @@
 			children = (
 				00C2ACC529FEBA5A0011DD89 /* AppDelegate.swift */,
 				00C2ACC729FEBA5A0011DD89 /* SceneDelegate.swift */,
+				00C2ACE829FF9C370011DD89 /* K.swift */,
 				00C2ACC929FEBA5A0011DD89 /* WelcomeViewController.swift */,
 				00C2ACDE29FEEA8F0011DD89 /* LogInViewController.swift */,
 				00C2ACDC29FEEA5F0011DD89 /* RegisterViewController.swift */,
@@ -212,6 +215,7 @@
 				00C2ACCA29FEBA5A0011DD89 /* WelcomeViewController.swift in Sources */,
 				00C2ACC629FEBA5A0011DD89 /* AppDelegate.swift in Sources */,
 				00C2ACC829FEBA5A0011DD89 /* SceneDelegate.swift in Sources */,
+				00C2ACE929FF9C370011DD89 /* K.swift in Sources */,
 				00C2ACDF29FEEA8F0011DD89 /* LogInViewController.swift in Sources */,
 				00C2ACDD29FEEA5F0011DD89 /* RegisterViewController.swift in Sources */,
 			);
@@ -289,7 +293,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -343,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

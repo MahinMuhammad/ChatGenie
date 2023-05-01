@@ -159,6 +159,7 @@
                         <outlet property="emailField" destination="F3v-Ek-kez" id="v72-gR-RV8"/>
                         <outlet property="logInButton" destination="Y3T-bm-bSW" id="cII-a7-pJe"/>
                         <outlet property="passwordField" destination="0Fj-tK-1k0" id="37i-rB-De3"/>
+                        <segue destination="fDc-ZE-szU" kind="show" identifier="LoginToChat" id="FKQ-EC-1ST"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R4L-0z-czC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -175,6 +176,7 @@
                         <viewLayoutGuide key="safeArea" id="ulw-wx-NeB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="PYM-sF-vya"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbf-92-geZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -257,6 +259,7 @@
                         <outlet property="emailField" destination="KEd-vw-YVn" id="3Hi-4g-D63"/>
                         <outlet property="passwordField" destination="fUb-nu-JAM" id="CGc-fl-E4J"/>
                         <outlet property="registerButton" destination="KYp-da-h0N" id="mv5-Md-P4t"/>
+                        <segue destination="fDc-ZE-szU" kind="show" identifier="RegisterToChat" id="jvR-ZM-RSB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ni-Gs-YoO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -298,6 +301,9 @@
             <size key="intrinsicContentSize" width="132" height="38"/>
         </designable>
     </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="FKQ-EC-1ST"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="Brand Green">
             <color red="0.57999998331069946" green="0.70599997043609619" blue="0.62400001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
