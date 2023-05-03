@@ -35,7 +35,5 @@ class WelcomeViewController: UIViewController {
             delayMultiplier += 1
         }
     }
-
-
 }
 

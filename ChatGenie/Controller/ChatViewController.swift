@@ -7,15 +7,20 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
     
-    let messages:[Message] = [
-        Message(body: "Hi this a demo bot message", userEmail: Auth.auth().currentUser?.email ?? "a@b.com", senderUserOrBot: K.MessageSender.bot),
-        Message(body: "Hi this a user", userEmail: Auth.auth().currentUser?.email ?? "a@b.com", senderUserOrBot: K.MessageSender.user)
+    let db = Firestore.firestore()
+    weak var listener: ListenerRegistration?
+    
+    var messages:[Message] = [
+        Message(body: "Hi I am Chat Genie. How can I assist you?", userEmail: Auth.auth().currentUser?.email ?? "general notice", senderUserOrBot: K.MessageSender.bot)
     ]
+    
+    var botMessagePool:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +31,12 @@ class ChatViewController: UIViewController {
         }
         title = Auth.auth().currentUser?.email
         
+        populateBotMessagePool()
+        
         tableView.dataSource = self
         tableView.register(UINib(nibName: K.MessageCell.cellNibName, bundle: nil), forCellReuseIdentifier: K.MessageCell.cellIdentifier)
+        
+        loadMessages()
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
@@ -40,10 +49,79 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
-        if let messageBody = messageTextField.text{
-            print(messageBody)
+        if let messageBody = messageTextField.text, let userEmail = Auth.auth().currentUser?.email{
+            let firestoreCollection = db.collection(K.FStore.messageCollectionName)
+            firestoreCollection.addDocument(data: [
+                K.FStore.emailField : userEmail,
+                K.FStore.userMessageField : messageBody,
+                K.FStore.botReplyField : getReply(),
+                K.FStore.dateField : Date().timeIntervalSince1970
+            ]){(error) in
+                if let e = error{
+                    print(e)
+                }else{
+                    print("Data saved")
+                }
+            }
         }
         messageTextField.text = ""
+    }
+    
+    func getReply()->String{
+        return botMessagePool.randomElement() ?? "I am sleeping now"
+    }
+    
+    func populateBotMessagePool(){
+        db.collection(K.FStore.commonPoolName).getDocuments { querySnapshot, error in
+            if let e = error{
+                print("Error loading messages from common pool. Error: \(e)")
+            }else{
+                print("Data retrived")
+                if let snapshotDocuments = querySnapshot?.documents{
+                    for doc in snapshotDocuments{
+                        let data = doc.data()
+                        if let message = data[K.FStore.commonPoolMessageField] as? String{
+                            self.botMessagePool.append(message)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func loadMessages(){
+        let firestoreCollection = db.collection(K.FStore.messageCollectionName)
+        if let currentUserEmail = Auth.auth().currentUser?.email{
+            let userDataCollection = firestoreCollection.whereField(K.FStore.emailField, isEqualTo: currentUserEmail)
+            let sortedDataCollection = userDataCollection.order(by: K.FStore.dateField)
+            listener = sortedDataCollection.addSnapshotListener({ querySnapshot, error in
+                if self.messages.count != 1{  //checking If the messages has the first welcome message or not
+                    self.messages = []
+                }
+                if let e = error{
+                    print("Found error loading messages. Error: \(e)")
+                }else{
+                    if let snapshotDocuments = querySnapshot?.documents{
+                        for doc in snapshotDocuments{
+                            let data = doc.data()
+                            if let userEmail = data[K.FStore.emailField] as? String, let userMessageBody = data[K.FStore.userMessageField] as? String, let botReplyBody = data[K.FStore.botReplyField] as? String{
+                                let userMessage = Message(body: userMessageBody, userEmail: userEmail, senderUserOrBot: K.MessageSender.user)
+                                let botReply = Message(body: botReplyBody, userEmail: userEmail, senderUserOrBot: K.MessageSender.bot)
+                                self.messages.append(userMessage)
+                                self.messages.append(botReply)
+                                
+                                DispatchQueue.main.async {
+                                    self.tableView.reloadData()
+                                    
+                                    let index = IndexPath(row: self.messages.count - 1, section: 0)
+                                    self.tableView.scrollToRow(at: index, at: .top, animated: true)
+                                }
+                            }
+                        }
+                    }
+                }
+            })
+        }
     }
 }
 

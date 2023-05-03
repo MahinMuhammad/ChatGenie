@@ -30,4 +30,14 @@ struct K{
         static let cellIdentifier = "ReusableCell"
         static let cellNibName = "CustomMessageCell"
     }
+    
+    struct FStore{
+        static let commonPoolName = "pool"
+        static let commonPoolMessageField = "message"
+        static let messageCollectionName = "messages"
+        static let emailField = "userEmail"
+        static let userMessageField = "userMessage"
+        static let botReplyField = "botReply"
+        static let dateField = "date"
+    }
 }
