@@ -60,7 +60,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Welcome Screen Background"/>
                         <constraints>
                             <constraint firstItem="ts3-JZ-nQv" firstAttribute="top" secondItem="irf-dV-oZL" secondAttribute="bottom" constant="8" id="0b8-xU-6VL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="irf-dV-oZL" secondAttribute="trailing" id="611-V2-ARw"/>
@@ -91,7 +91,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a@b.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="F3v-Ek-kez" customClass="JVFloatLabeledTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="F3v-Ek-kez" customClass="JVFloatLabeledTextField">
                                 <rect key="frame" x="48" y="140" width="318" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7tG-5m-CUx"/>
@@ -108,7 +108,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0Fj-tK-1k0" customClass="JVFloatLabeledTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0Fj-tK-1k0" customClass="JVFloatLabeledTextField">
                                 <rect key="frame" x="48" y="238" width="318" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fdr-yR-HCs"/>
@@ -209,7 +209,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" name="Brand Green"/>
+                                <color key="backgroundColor" name="ChatView Bottom Pane"/>
                                 <constraints>
                                     <constraint firstItem="d2y-Xo-eKt" firstAttribute="leading" secondItem="0j6-4r-ZTJ" secondAttribute="trailing" constant="20" id="1xd-NG-RYX"/>
                                     <constraint firstItem="0j6-4r-ZTJ" firstAttribute="leading" secondItem="NbY-dg-g5X" secondAttribute="leading" constant="20" id="Vfg-6K-qGm"/>
@@ -221,7 +221,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ulw-wx-NeB"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="NbY-dg-g5X" secondAttribute="trailing" id="B7F-sV-Exq"/>
                             <constraint firstItem="NbY-dg-g5X" firstAttribute="leading" secondItem="ma7-D0-jQw" secondAttribute="leading" id="Gqs-am-YVr"/>
@@ -311,7 +311,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WHh-Dr-un0"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KEd-vw-YVn" firstAttribute="leading" secondItem="WHh-Dr-un0" secondAttribute="leading" constant="48" id="3qO-45-I4n"/>
                             <constraint firstItem="KYp-da-h0N" firstAttribute="top" secondItem="fUb-nu-JAM" secondAttribute="bottom" constant="48" id="Prb-49-FNi"/>
@@ -362,7 +362,7 @@
             <size key="intrinsicContentSize" width="132" height="38"/>
         </designable>
         <designable name="F3v-Ek-kez">
-            <size key="intrinsicContentSize" width="129" height="39.5"/>
+            <size key="intrinsicContentSize" width="86.5" height="39.5"/>
         </designable>
         <designable name="KEd-vw-YVn">
             <size key="intrinsicContentSize" width="86.5" height="39.5"/>
@@ -372,15 +372,21 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="jvR-ZM-RSB"/>
+        <segue reference="FKQ-EC-1ST"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
         <namedColor name="Brand Green">
-            <color red="0.57999998331069946" green="0.70599997043609619" blue="0.62400001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.58039215686274503" green="0.70588235294117641" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Brand Light Green">
             <color red="0.9570000171661377" green="0.98799997568130493" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ChatView Bottom Pane">
+            <color red="0.58039215686274503" green="0.70588235294117641" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Welcome Screen Background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
