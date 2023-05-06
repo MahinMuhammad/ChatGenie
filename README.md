@@ -4,10 +4,10 @@
 <h3>Graphical User Interface</h3>
   <table style="border:none">
     <tr>
-        <td><img src="Documentation/welcome.png" height="400"></td>
-        <td><img src="Documentation/reg.png" height="400"></td>
-        <td><img src="Documentation/login.png" height="400"></td>
-        <td><img src="Documentation/chatView.png" height="400"></td>
+        <td><img src="Documentation/welcome.png" height="350"></td>
+        <td><img src="Documentation/reg.png" height="350"></td>
+        <td><img src="Documentation/login.png" height="350"></td>
+        <td><img src="Documentation/chatView.png" height="350"></td>
      </tr>
   </table>
 
