@@ -1,11 +1,15 @@
 <h1>ChatGenie</h1>
   ChatGenie is an iOS app that lets users chat with an AI. The app includes log in and register functionality with Firebase Auth and also has Firebase Firestore for storing chats. In addition, ChatGenie utilizes third-party libraries such as IQKeyboardManagerSwift and JVFloatLabeledTextField for improved user experience.
 
-<h3>UI</h3>
-        <img src="Documentation/welcome.png" height="250">
-        <img src="Documentation/reg.png" height="250">
-        <img src="Documentation/login.png" height="250">
-        <img src="Documentation/chatView.png" height="250">
+<h3>Graphical User Interface</h3>
+  <table style="border:none">
+    <tr>
+        <td><img src="Documentation/welcome.png" height="250"></td>
+        <td><img src="Documentation/reg.png" height="250"></td>
+        <td><img src="Documentation/login.png" height="250"></td>
+        <td><img src="Documentation/chatView.png" height="250"></td>
+     </tr>
+  </table>
 
 <h3>Getting Started</h3>
   To clone this app and run it on Xcode, follow these steps:
