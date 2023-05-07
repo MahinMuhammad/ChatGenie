@@ -36,7 +36,7 @@
     <li>Download and GoogleService-Info.plist to project.</li>
     <li>Create a 'pool' named collection on firestore.</li>
     <li>Insert Random messages for bot to reply with on firestore 'pool' collection.</li>
-    <li>Open the ChatGenie.xcodeproj file in Xcode.</li>
+    <li>Open the ChatGenie.xcworkspace file in Xcode.</li>
     <li>Install any required dependencies using CocoaPods or SPM.</li>
     <li>Build and run the project in Xcode.</li>
 </ol> 
