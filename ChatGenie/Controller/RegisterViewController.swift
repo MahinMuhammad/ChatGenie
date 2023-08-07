@@ -25,12 +25,12 @@ import UIKit
 
 import FirebaseAuth
 import JVFloatLabeledTextField
+import FirebaseAnalytics
 
 class RegisterViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var emailField: JVFloatLabeledTextField!
     @IBOutlet weak var passwordField: JVFloatLabeledTextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

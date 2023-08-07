@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0044D0A72A0659BB00B8954E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0044D0A62A0659BB00B8954E /* GoogleService-Info.plist */; };
+		0046BF212A814A1F00146F7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0046BF202A814A1F00146F7A /* GoogleService-Info.plist */; };
 		00C2ACC629FEBA5A0011DD89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2ACC529FEBA5A0011DD89 /* AppDelegate.swift */; };
 		00C2ACC829FEBA5A0011DD89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2ACC729FEBA5A0011DD89 /* SceneDelegate.swift */; };
 		00C2ACCA29FEBA5A0011DD89 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2ACC929FEBA5A0011DD89 /* WelcomeViewController.swift */; };
@@ -29,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0044D0A62A0659BB00B8954E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0046BF202A814A1F00146F7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00C2ACC229FEBA5A0011DD89 /* ChatGenie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGenie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C2ACC529FEBA5A0011DD89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00C2ACC729FEBA5A0011DD89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +87,7 @@
 		00C2ACC429FEBA5A0011DD89 /* ChatGenie */ = {
 			isa = PBXGroup;
 			children = (
+				0046BF202A814A1F00146F7A /* GoogleService-Info.plist */,
 				00C2ACC529FEBA5A0011DD89 /* AppDelegate.swift */,
 				00C2ACC729FEBA5A0011DD89 /* SceneDelegate.swift */,
 				00C2ACE829FF9C370011DD89 /* K.swift */,
@@ -95,7 +96,6 @@
 				00C2ACEE29FFBA0F0011DD89 /* Controller */,
 				00C2ACCE29FEBA5C0011DD89 /* Assets.xcassets */,
 				00C2ACD329FEBA5C0011DD89 /* Info.plist */,
-				0044D0A62A0659BB00B8954E /* GoogleService-Info.plist */,
 			);
 			path = ChatGenie;
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 			files = (
 				00C2ACD229FEBA5C0011DD89 /* LaunchScreen.storyboard in Resources */,
 				00C2ACCF29FEBA5C0011DD89 /* Assets.xcassets in Resources */,
-				0044D0A72A0659BB00B8954E /* GoogleService-Info.plist in Resources */,
+				0046BF212A814A1F00146F7A /* GoogleService-Info.plist in Resources */,
 				00D2E7C329FFFCE5006A1C2A /* CustomMessageCell.xib in Resources */,
 				00C2ACCD29FEBA5A0011DD89 /* Main.storyboard in Resources */,
 			);
