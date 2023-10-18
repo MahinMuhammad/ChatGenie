@@ -25,7 +25,6 @@ import UIKit
 
 import FirebaseAuth
 import JVFloatLabeledTextField
-import FirebaseAnalytics
 
 class RegisterViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!

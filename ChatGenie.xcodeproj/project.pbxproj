@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0046BF212A814A1F00146F7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0046BF202A814A1F00146F7A /* GoogleService-Info.plist */; };
+		007DCC1B2AE033E200BEEC90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 007DCC1A2AE033E200BEEC90 /* GoogleService-Info.plist */; };
 		00C2ACC629FEBA5A0011DD89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2ACC529FEBA5A0011DD89 /* AppDelegate.swift */; };
 		00C2ACC829FEBA5A0011DD89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2ACC729FEBA5A0011DD89 /* SceneDelegate.swift */; };
 		00C2ACCA29FEBA5A0011DD89 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C2ACC929FEBA5A0011DD89 /* WelcomeViewController.swift */; };
@@ -25,11 +25,10 @@
 		00D2E7C229FFFCE5006A1C2A /* CustomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D2E7C029FFFCE5006A1C2A /* CustomMessageCell.swift */; };
 		00D2E7C329FFFCE5006A1C2A /* CustomMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00D2E7C129FFFCE5006A1C2A /* CustomMessageCell.xib */; };
 		00D2E7C62A000EF2006A1C2A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D2E7C52A000EF2006A1C2A /* Message.swift */; };
-		0B1CF994C9935FF08B996061 /* Pods_ChatGenie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED228BF3B34C7B7DED0B9724 /* Pods_ChatGenie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0046BF202A814A1F00146F7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		007DCC1A2AE033E200BEEC90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00C2ACC229FEBA5A0011DD89 /* ChatGenie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGenie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C2ACC529FEBA5A0011DD89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00C2ACC729FEBA5A0011DD89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,9 +44,6 @@
 		00D2E7C029FFFCE5006A1C2A /* CustomMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageCell.swift; sourceTree = "<group>"; };
 		00D2E7C129FFFCE5006A1C2A /* CustomMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMessageCell.xib; sourceTree = "<group>"; };
 		00D2E7C52A000EF2006A1C2A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		8BFD168F2ABCD2A70C8049EC /* Pods-ChatGenie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatGenie.release.xcconfig"; path = "Target Support Files/Pods-ChatGenie/Pods-ChatGenie.release.xcconfig"; sourceTree = "<group>"; };
-		EBE8171CC7047677E2AD76A9 /* Pods-ChatGenie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatGenie.debug.xcconfig"; path = "Target Support Files/Pods-ChatGenie/Pods-ChatGenie.debug.xcconfig"; sourceTree = "<group>"; };
-		ED228BF3B34C7B7DED0B9724 /* Pods_ChatGenie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatGenie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +52,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				00D2E7BF29FFFAD7006A1C2A /* IQKeyboardManagerSwift in Frameworks */,
-				0B1CF994C9935FF08B996061 /* Pods_ChatGenie.framework in Frameworks */,
 				00C2ACE729FF973F0011DD89 /* FirebaseFirestore in Frameworks */,
 				00C2ACE529FF973F0011DD89 /* FirebaseAuth in Frameworks */,
 				00C2ACDB29FED3770011DD89 /* JVFloatLabeledTextField in Frameworks */,
@@ -69,10 +64,9 @@
 		00C2ACB929FEBA5A0011DD89 = {
 			isa = PBXGroup;
 			children = (
+				007DCC1A2AE033E200BEEC90 /* GoogleService-Info.plist */,
 				00C2ACC429FEBA5A0011DD89 /* ChatGenie */,
 				00C2ACC329FEBA5A0011DD89 /* Products */,
-				22B1CCD481B0A926D57BDEE0 /* Pods */,
-				3FD55421E3597CAF65FD3716 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,7 +81,6 @@
 		00C2ACC429FEBA5A0011DD89 /* ChatGenie */ = {
 			isa = PBXGroup;
 			children = (
-				0046BF202A814A1F00146F7A /* GoogleService-Info.plist */,
 				00C2ACC529FEBA5A0011DD89 /* AppDelegate.swift */,
 				00C2ACC729FEBA5A0011DD89 /* SceneDelegate.swift */,
 				00C2ACE829FF9C370011DD89 /* K.swift */,
@@ -130,23 +123,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		22B1CCD481B0A926D57BDEE0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EBE8171CC7047677E2AD76A9 /* Pods-ChatGenie.debug.xcconfig */,
-				8BFD168F2ABCD2A70C8049EC /* Pods-ChatGenie.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		3FD55421E3597CAF65FD3716 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				ED228BF3B34C7B7DED0B9724 /* Pods_ChatGenie.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,7 +130,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00C2ACD629FEBA5C0011DD89 /* Build configuration list for PBXNativeTarget "ChatGenie" */;
 			buildPhases = (
-				DB3D1901934E3E78FDE694F7 /* [CP] Check Pods Manifest.lock */,
 				00C2ACBE29FEBA5A0011DD89 /* Sources */,
 				00C2ACBF29FEBA5A0011DD89 /* Frameworks */,
 				00C2ACC029FEBA5A0011DD89 /* Resources */,
@@ -219,38 +194,13 @@
 			files = (
 				00C2ACD229FEBA5C0011DD89 /* LaunchScreen.storyboard in Resources */,
 				00C2ACCF29FEBA5C0011DD89 /* Assets.xcassets in Resources */,
-				0046BF212A814A1F00146F7A /* GoogleService-Info.plist in Resources */,
+				007DCC1B2AE033E200BEEC90 /* GoogleService-Info.plist in Resources */,
 				00D2E7C329FFFCE5006A1C2A /* CustomMessageCell.xib in Resources */,
 				00C2ACCD29FEBA5A0011DD89 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		DB3D1901934E3E78FDE694F7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ChatGenie-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		00C2ACBE29FEBA5A0011DD89 /* Sources */ = {
@@ -407,7 +357,6 @@
 		};
 		00C2ACD729FEBA5C0011DD89 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBE8171CC7047677E2AD76A9 /* Pods-ChatGenie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -437,7 +386,6 @@
 		};
 		00C2ACD829FEBA5C0011DD89 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BFD168F2ABCD2A70C8049EC /* Pods-ChatGenie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
